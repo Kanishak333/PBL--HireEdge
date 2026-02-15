@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="container footer-container">
                 <div className="footer-section">
                     <h3>HireEdge</h3>
-                    <p>Intelligent resume shortlisting for modern HR teams. Powered by advanced NLP.</p>
+                    <p>Intelligent resume shortlisting for modern HR teams. Powered by ai.</p>
                 </div>
 
                 <div className="footer-section">

@@ -43,7 +43,7 @@ const Navbar = () => {
                     ))}
                     <li className="navbar-item">
                         <Link to="/demo" className="btn btn-primary" onClick={() => setIsOpen(false)}>
-                            Demo
+                            Get Started
                         </Link>
                     </li>
                 </ul>

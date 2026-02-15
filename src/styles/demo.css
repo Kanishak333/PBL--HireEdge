@@ -84,11 +84,18 @@
 
 .dashboard-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr;
     gap: 2rem;
 }
 
-.chart-card,
+.chart-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    min-height: 400px;
+}
+
 .candidates-list {
     background: white;
     padding: 1.5rem;

@@ -72,25 +72,37 @@ app.post('/api/analyze', upload.single('resume'), async (req, res) => {
         });
 
         const prompt = `
-      You are an expert HR Recruiter. Analyze the following resume text.
+      You are an expert HR Recruiter. Analyze the following document.
+      IT MAY CONTAIN A SINGLE RESUME OR MULTIPLE RESUMES COMBINED INTO ONE FILE.
       
-      RESUME TEXT:
-      ${resumeText.substring(0, 10000)} 
+      DOCUMENT TEXT:
+      ${resumeText.substring(0, 15000)} 
       
       Task:
-      - Extract the candidate's Name.
-      - Extract key technical Skills.
-      - Calculate a "Job Fit Score" (0-100) assuming a general Software Engineering role (React, Node, Fullstack).
-      - Provide a short summary.
-
-      Return ONLY a JSON object with this structure:
-      {
-        "name": "Candidate Name",
-        "score": 85,
-        "skills": ["Skill1", "Skill2"],
-        "role": "Suggested Role",
-        "summary": "Brief summary..."
-      }
+      1. Identify each distinct candidate in the text.
+      2. For EACH candidate, extract:
+         - Name
+         - Key Technical Skills
+         - Years of Work Experience (estimate as a number, e.g., 3 for "3 years")
+         - Highest Education Level (e.g., "Bachelor's in CS", "Master's in Engineering", "PhD")
+         - "Job Fit Score" (0-100) for a Senior Software Engineer role.
+         - Suggested Role (based on their specific skills).
+         - A short summary.
+      
+      Return ONLY a JSON ARRAY of objects.
+      Example format:
+      [
+        {
+          "name": "Candidate Name",
+          "score": 85,
+          "skills": ["React", "Node.js"],
+          "experience": 5,
+          "education": "Bachelor's in Computer Science",
+          "role": "Frontend Developer",
+          "summary": "Strong experience in..."
+        },
+        ...
+      ]
     `;
 
         // 3. Analyze with Gemini
