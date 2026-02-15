@@ -27,19 +27,20 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+                    <form className="contact-form" action="https://formsubmit.co/kanishakg1001@gmail.com" method="POST">
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
-                            <input type="text" id="name" placeholder="Your Name" />
+                            <input type="text" id="name" name="name" placeholder="Your Name" required />
                         </div>
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
-                            <input type="email" id="email" placeholder="your@email.com" />
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required />
                         </div>
                         <div className="form-group">
                             <label htmlFor="message">Message</label>
-                            <textarea id="message" rows="5" placeholder="How can we help?"></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
                         </div>
+                        <input type="hidden" name="_captcha" value="false" />
                         <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>Send Message</button>
                     </form>
                 </div>
