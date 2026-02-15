@@ -1,0 +1,148 @@
+.demo-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Upload Zone */
+.upload-zone {
+    background: white;
+    border: 2px dashed #CBD5E1;
+    border-radius: 12px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-zone:hover {
+    border-color: var(--color-secondary);
+    background-color: #F8FAFC;
+}
+
+.upload-content {
+    text-align: center;
+}
+
+.upload-icon {
+    font-size: 5rem;
+    color: #94A3B8;
+    margin-bottom: 1rem;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+/* Processing Zone */
+.processing-zone {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.spinner-icon {
+    font-size: 4rem;
+    color: var(--color-secondary);
+    animation: spin 1s linear infinite;
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+    width: 300px;
+    height: 8px;
+    background-color: #E2E8F0;
+    border-radius: 4px;
+    margin: 2rem auto;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--color-secondary);
+    width: 0%;
+    animation: progress 3s ease-in-out forwards;
+}
+
+@keyframes progress {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* Results Zone */
+.results-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+}
+
+.chart-card,
+.candidates-list {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+}
+
+.candidates-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.candidates-table th,
+.candidates-table td {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.candidates-table th {
+    color: var(--color-text-muted);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.score-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.score-high {
+    background-color: #DCFCE7;
+    color: #166534;
+}
+
+.score-mid {
+    background-color: #DBEAFE;
+    color: #1E40AF;
+}
+
+.score-low {
+    background-color: #FEE2E2;
+    color: #991B1B;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
