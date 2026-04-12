@@ -19,7 +19,7 @@ const Home = () => {
                             Save time, reduce bias, and hire the best talent faster.
                         </p>
                         <div className="hero-actions">
-                            <Link to="/demo" className="btn btn-primary">Try Live Demo</Link>
+                            <Link to="/demo" className="btn btn-primary">Get Started</Link>
                             <Link to="/how-it-works" className="btn btn-outline">How It Works</Link>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ const Home = () => {
                 <div className="container cta-container">
                     <h2>Ready to streamline your hiring?</h2>
                     <p>Join forward-thinking HR teams using HireEdge to find top talent.</p>
-                    <Link to="/contact" className="btn btn-primary btn-large">Get Started Now</Link>
+                    <Link to="/contact" className="btn btn-primary btn-large">Contact Us</Link>
                 </div>
             </section>
         </div>

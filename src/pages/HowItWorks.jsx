@@ -14,7 +14,7 @@ const HowItWorks = () => {
             id: 2,
             icon: <FiCpu />,
             title: "AI Analysis",
-            description: "Our NLP engine extracts key skills, experience, and qualifications from every document."
+            description: "Our AI engine extracts key skills, experience, and qualifications from every document."
         },
         {
             id: 3,
